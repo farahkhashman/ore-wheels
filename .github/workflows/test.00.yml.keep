@@ -43,7 +43,7 @@ jobs:
       run: |
         Expand-Archive -Path oreswig.02.zip -DestinationPath .
     - name: Build ORE wheels
-      uses: pypa/cibuildwheel@v2.11.1
+      uses: pypa/cibuildwheel@v2.16.2
       env:
         BOOST_ROOT: C:\local\boost
         BOOST_LIB: C:\local\boost\lib32-msvc-14.3

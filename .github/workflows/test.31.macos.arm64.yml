@@ -33,7 +33,7 @@ jobs:
         cmake --build . -j4
         cmake --install .
     - name: Build ORE wheels
-      uses: pypa/cibuildwheel@v2.11.1
+      uses: pypa/cibuildwheel@v2.16.2
       env:
         CIBW_SKIP: cp36-*
         #CIBW_BUILD: cp310-macosx_arm64

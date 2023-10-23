@@ -24,7 +24,7 @@ jobs:
         #tar xfz ore.00.tgz
         #tar xfz oreswig.01.tgz
     - name: Build ORE wheels
-      uses: pypa/cibuildwheel@v2.11.1
+      uses: pypa/cibuildwheel@v2.16.2
       env:
         #BOOST_ROOT: C:\local\boost
         #BOOST_LIB: C:\local\boost\lib64-msvc-14.3
