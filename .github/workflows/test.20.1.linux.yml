@@ -1,4 +1,4 @@
-name: Build 20 - Linux - cmake x86_64 manylinux
+name: Build 20.1 - Linux - cmake x86_64 manylinux
 on: workflow_dispatch
 jobs:
   wheels-linux:
@@ -20,12 +20,7 @@ jobs:
       uses: pypa/cibuildwheel@v2.16.2
       env:
         CIBW_BUILD: "*-manylinux*"
-        CIBW_SKIP: cp36-* pp*
-        #CIBW_BUILD: cp37-manylinux_x86_64
-        #CIBW_BUILD: cp38-manylinux_x86_64
-        #CIBW_BUILD: cp39-manylinux_x86_64
-        #CIBW_BUILD: cp310-manylinux_x86_64
-        #CIBW_BUILD: cp311-manylinux_x86_64
+        CIBW_SKIP: cp*
         CIBW_ARCHS_LINUX: x86_64
         CIBW_BUILD_VERBOSITY: 2
         CIBW_BEFORE_ALL_LINUX: ./before_all_linux.sh
