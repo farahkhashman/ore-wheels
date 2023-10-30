@@ -59,4 +59,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ore-exe-windows-${{ matrix.arch }}
-        path: ./App/Release/*.exe
+        path: C:/local/ore/build/ore/App/Release/*.exe
