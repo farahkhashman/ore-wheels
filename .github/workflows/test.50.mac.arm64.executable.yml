@@ -1,4 +1,4 @@
-name: Build 50 - ORE MacOS ARM64 Exeutable
+name: Build 50 - ORE MacOS ARM64 Executable
 
 on: workflow_dispatch
 jobs:
@@ -27,7 +27,7 @@ jobs:
         cd ore
         mkdir build
         cd build
-        cmake -DCMAKE_OSX_ARCHITECTURES=arm64 -DORE_USE_ZLIB=ON -DORE_BUILD_DOC=OFF -DORE_BUILD_EXAMPLES=OFF -DORE_BUILD_TESTS=OFF -DORE_BUILD_APP=OFF -DQL_BUILD_BENCHMARK=OFF -DQL_BUILD_EXAMPLES=OFF -DQL_BUILD_TEST_SUITE=OFF -DQL_ENABLE_SESSIONS=ON -DCMAKE_BUILD_TYPE=Release ..
+        cmake -DCMAKE_OSX_ARCHITECTURES=arm64 -DORE_USE_ZLIB=ON -DORE_BUILD_DOC=OFF -DORE_BUILD_EXAMPLES=OFF -DORE_BUILD_TESTS=OFF -DORE_BUILD_APP=ON -DQL_BUILD_BENCHMARK=OFF -DQL_BUILD_EXAMPLES=OFF -DQL_BUILD_TEST_SUITE=OFF -DQL_ENABLE_SESSIONS=ON -DCMAKE_BUILD_TYPE=Release ..
         cmake --build . -j4
         cmake --install .
     - name: Save executables as artifacts
