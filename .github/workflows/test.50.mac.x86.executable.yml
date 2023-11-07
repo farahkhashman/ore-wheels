@@ -29,8 +29,12 @@ jobs:
         cmake -DORE_USE_ZLIB=ON -DORE_BUILD_DOC=OFF -DORE_BUILD_EXAMPLES=OFF -DORE_BUILD_TESTS=OFF -DORE_BUILD_APP=ON -DQL_BUILD_BENCHMARK=OFF -DQL_BUILD_EXAMPLES=OFF -DQL_BUILD_TEST_SUITE=OFF -DQL_ENABLE_SESSIONS=ON -DCMAKE_BUILD_TYPE=Release ..
         cmake --build . -j4
         cmake --install .
+    - name: Find File Path
+      run: |
+        file_path=$(find . -name 'ore.exe')
+        echo "Found file at path: $file_path"
     - name: Save executables as artifacts
       uses: actions/upload-artifact@v3
       with:
         name: ore-exe-macos-x86_64
-        path: ./build/App/Release/ore.exe
+        path: "$file_path"
