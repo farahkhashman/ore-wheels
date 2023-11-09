@@ -44,4 +44,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: executable-ubuntu-x86_64
-        path:  /home/runner/work/ore-wheels/ore-wheels/ore/build/App/Release/ore.exe
+        path:  /home/runner/work/ore-wheels/ore-wheels/ore/build/App/Release/ore
