@@ -37,7 +37,8 @@ jobs:
         cd ore
         mkdir build
         cd build
-        cmake -DBOOST_ROOT=/home/runner/boost_1_78/boost/boost/ -DBOOST_LIBRARYDIR=/home/runner/boost_1_78/boost/boost/lib -BOOST_INC=/home/runner/boost_1_78/boost/boost/include/boost -BOOST_INCLUDE_DIR=/home/runner/boost_1_78/boost/boost/include/boost -DQL_ENABLE_SESSIONS=ON ..
+        cmake -DBOOST_ROOT=/home/runner/boost_1_78/boost/boost/ -BOOST_INCLUDE_DIR=/home/runner/boost_1_78/boost/boost/include/boost -DQL_ENABLE_SESSIONS=ON ..
+        dir
         make -j4
     - name: Save wheels as artifacts
       uses: actions/upload-artifact@v3
