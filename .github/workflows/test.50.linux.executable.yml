@@ -11,9 +11,9 @@ jobs:
         swap-size-gb: 10
     - name: Build Boost
       env:
-        BOOST_LIB: /home/runner/boost_1_78/boost/lib
-        BOOST_INC: /home/runner/boost_1_78/boost/include
-        BOOST_INCLUDE_DIR: /home/runner/boost_1_78/boost/include
+        BOOST_LIB: /home/runner/boost_1_78/boost/boost/lib
+        BOOST_INC: /home/runner/boost_1_78/boost/boost/include/boost
+        BOOST_INCLUDE_DIR: /home/runner/boost_1_78/boost/boost/include/boost
       uses: MarkusJx/install-boost@v2.4.4
       id: install-boost
       with:
