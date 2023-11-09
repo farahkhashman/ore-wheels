@@ -38,10 +38,10 @@ jobs:
         mkdir build
         cd build
         cmake -DBOOST_ROOT=/home/runner/boost_1_78/boost/boost/ -DQL_ENABLE_SESSIONS=ON ..
-        dir
+        dir /home/runner/work/ore-wheels/ore-wheels/ore/build/App/ -R
         make -j4
     - name: Save wheels as artifacts
       uses: actions/upload-artifact@v3
       with:
         name: executable-ubuntu-x86_64
-        path: ./ore.exe
+        path:  /home/runner/work/ore-wheels/ore-wheels/ore/build/App/Release/ore.exe
