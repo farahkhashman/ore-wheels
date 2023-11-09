@@ -21,6 +21,10 @@ jobs:
         platform_version: 20.04
         toolset: gcc
         arch: x86
+    - name: Check Boost path
+      run: |
+        pwd
+        cd /home/runner/boost_1_78/
     - name: Unpack ORE
       run: |
         pwd
