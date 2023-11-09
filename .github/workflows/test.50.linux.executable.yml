@@ -11,9 +11,9 @@ jobs:
         swap-size-gb: 10
     - name: Build Boost
       env:
-        BOOST_LIB: /home/runner/boost_1_78/lib
-        BOOST_INC: /home/runner/boost_1_78/include
-        BOOST_INCLUDE_DIR: /home/runner/boost_1_78/include
+        BOOST_LIB: /home/runner/boost_1_78/boost/lib
+        BOOST_INC: /home/runner/boost_1_78/boost/include
+        BOOST_INCLUDE_DIR: /home/runner/boost_1_78/boost/include
       uses: MarkusJx/install-boost@v2.4.4
       with:
         boost_version: 1.78.0
@@ -24,7 +24,7 @@ jobs:
     - name: Check Boost path
       run: |
         pwd
-        cd /home/runner/boost_1_78/
+        cd /home/runner/boost_1_78/boost
         dir
     - name: Unpack ORE
       run: |
