@@ -25,6 +25,7 @@ jobs:
       run: |
         pwd
         cd /home/runner/boost_1_78/
+        dir
     - name: Unpack ORE
       run: |
         pwd
