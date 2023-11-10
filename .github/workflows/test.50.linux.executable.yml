@@ -26,7 +26,7 @@ jobs:
       run: |
         pwd
         cd /home/runner/boost_1_78/
-        dir -R
+        # dir -R
     - name: Unpack ORE
       run: |
         pwd
@@ -38,8 +38,8 @@ jobs:
         mkdir build
         cd build
         cmake -DBOOST_ROOT=/home/runner/boost_1_78/boost/boost/ -DQL_ENABLE_SESSIONS=ON ..
-        dir /home/runner/work/ore-wheels/ore-wheels/ore/build/App/ -R
         make -j4
+        dir /home/runner/work/ore-wheels/ore-wheels/ore/build/App/ -R
     - name: Save wheels as artifacts
       uses: actions/upload-artifact@v3
       with:
