@@ -49,7 +49,7 @@ jobs:
         cd build
         SET ZLIB_ROOT=C:\local\zlib-1.3.1
         SET Eigen3_DIR=C:\local\eigen-3.4.0
-        dir C:\local\zlib-1.3\build\Release
+        dir C:\local\zlib-1.3.1\build\Release
         cmake -DORE_BUILD_DOC=ON -DORE_BUILD_EXAMPLES=OFF -DORE_BUILD_TESTS=OFF -DORE_BUILD_APP=ON -DQL_BUILD_BENCHMARK=OFF -DQL_BUILD_EXAMPLES=OFF -DQL_BUILD_TEST_SUITE=OFF -DCMAKE_BUILD_TYPE=Release -DMSVC_LINK_DYNAMIC_RUNTIME=OFF -DORE_USE_ZLIB=ON -DQL_ENABLE_SESSIONS=ON -DZLIB_LIBRARY=C:\local\zlib-1.3\build\Release\zlib.lib -G "Visual Studio 17 2022" -A ${{ matrix.platform }} ..
         cmake --build . --config Release --verbose
 
