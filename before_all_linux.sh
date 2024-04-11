@@ -22,7 +22,7 @@ echo "XYZ END unpack eigen"
 echo "XYZ BEGIN unpack zlib"
 curl -O -L https://www.zlib.net/zlib-1.3.1.tar.gz
 tar xzvf zlib-1.3.1.tar.gz
-cd zlib-1.3
+cd zlib-1.3.1
 ./configure
 make
 cd ..
