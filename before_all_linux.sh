@@ -20,8 +20,8 @@ cd ../..
 echo "XYZ END unpack eigen"
 
 echo "XYZ BEGIN unpack zlib"
-curl -O -L https://www.zlib.net/zlib-1.3.tar.gz
-tar xzvf zlib-1.3.tar.gz
+curl -O -L https://www.zlib.net/zlib-1.3.1.tar.gz
+tar xzvf zlib-1.3.1.tar.gz
 cd zlib-1.3
 ./configure
 make
@@ -35,7 +35,7 @@ tar xfz boost_1_80_0.tar.gz
 cd boost_1_80_0
 export Eigen3_DIR=$CURRENT_DIR/eigen-3.4.0
 ./bootstrap.sh --with-libraries=date_time,filesystem,iostreams,log,regex,serialization,system,thread,timer
-./b2 install -sZLIB_SOURCE=$CURRENT_DIR/zlib-1.3
+./b2 install -sZLIB_SOURCE=$CURRENT_DIR/zlib-1.3.1
 cd ..
 echo "XYZ END unpack boost"
 
@@ -44,7 +44,7 @@ echo "XYZ BEGIN unpack ORE"
 cd ore
 mkdir build
 cd build
-export ZLIB_ROOT=$CURRENT_DIR/zlib-1.3
+export ZLIB_ROOT=$CURRENT_DIR/zlib-1.3.1
 cmake -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DORE_USE_ZLIB=ON -DORE_BUILD_DOC=OFF -DORE_BUILD_EXAMPLES=OFF -DORE_BUILD_TESTS=OFF -DORE_BUILD_APP=OFF -DQL_BUILD_BENCHMARK=OFF -DQL_BUILD_EXAMPLES=OFF -DQL_BUILD_TEST_SUITE=OFF -DQL_ENABLE_SESSIONS=ON -DCMAKE_BUILD_TYPE=Release ..
 cmake --build . -j4
 cmake --install .
